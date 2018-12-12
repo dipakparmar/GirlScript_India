@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="./images/gslogo.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/gslogo.png" />
+    <title>GirlScript India</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <script src="./js/require.min.js"></script>
+    <script>
+        requirejs.config({
+            baseUrl: '.'
+        });
+    </script>
+    <!-- Dashboard Core -->
+    <link href="./css/dashboard.css" rel="stylesheet" />
+    <script src="./js/dashboard.js"></script>
+    <!-- c3.js Charts Plugin -->
+    <link href="./plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <script src="./plugins/charts-c3/plugin.js"></script>
+    <!-- Google Maps Plugin -->
+    <link href="./plugins/maps-google/plugin.css" rel="stylesheet" />
+    <script src="./plugins/maps-google/plugin.js"></script>
+    <!-- Input Mask Plugin -->
+    <script src="./plugins/input-mask/plugin.js"></script>
+</head>
+
+<body class="">
+    <div class="page">
+        <div class="page-main">
+            <div class="header py-4">
+                <div class="container">
+                    <div class="d-flex">
+                        <a class="header-brand" href="./index.html">
+                            <img src="./images/gslogo.png" class="header-brand-img" alt="GirlScript India">
+                        </a>
+                        <!-- Notification's Updates Panel -->
+                        <div class="d-flex order-lg-2 ml-auto">
+                            <div class="nav-item d-none d-md-flex">
+                                <a href="" class="btn btn-sm btn-outline-primary" target="_blank">Registration!</a>
+                            </div>
+                            <div class="dropdown d-none d-md-flex">
+                                <a class="nav-link icon" data-toggle="dropdown">
+                                    <i class="fe fe-bell"></i>
+                                    <span class="nav-unread"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a href="#" class="dropdown-item d-flex">
+                                        <span class="avatar mr-3 align-self-center" style="background-image: url(./images/gslogo.png)"></span>
+                                        <div>
+                                            <strong>First Evaluation</strong> is starting soon!
+                                            <div class="small text-muted">12 hours ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex">
+                                        <span class="avatar mr-3 align-self-center" style="background-image: url(./images/gslogo.png)"></span>
+                                        <div>
+                                            <strong>Projects </strong> Announced!
+                                            <div class="small text-muted">3 days ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex">
+                                        <span class="avatar mr-3 align-self-center" style="background-image: url(./images/gslogo.png)"></span>
+                                        <div>
+                                            <strong>Registration</strong> started for GSoC India!
+                                            <div class="small text-muted">12 days ago</div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item text-center text-muted-dark">Mark all as read</a>
+                                </div>
+                            </div>
+
+                            <!--  User Bar-->
+                            <!--
+                <div class="dropdown">
+                  <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                    <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
+                    <span class="ml-2 d-none d-lg-block">
+                      <span class="text-default">Jane Pearson</span>
+                      <small class="text-muted d-block mt-1">Administrator</small>
+                    </span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-user"></i> Profile
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-settings"></i> Settings
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span class="float-right"><span class="badge badge-primary">6</span></span>
+                      <i class="dropdown-icon fe fe-mail"></i> Inbox
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-send"></i> Message
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-help-circle"></i> Need help?
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                    </a>
+                  </div>
+                </div>
+            -->
+                        </div>
+                        <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                            <span class="header-toggler-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Search bar
+                            <div class="col-lg-3 ml-auto">
+                            <form class="input-icon my-3 my-lg-0">
+                                <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
+                                <div class="input-icon-addon">
+                                    <i class="fe fe-search"></i>
+                                </div>
+                            </form>
+                        </div>-->
+                        <div class="col-lg order-lg-first">
+                            <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active">
+                                        <i class="fe fe-home"></i> Home</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a href="./form-elements.html" class="nav-link">
+                                        <i class="fe fe-flag"></i> Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./gallery.html" class="nav-link">
+                                        <i class="fe fe-layers"></i> Resources</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./docs/index.html" class="nav-link">
+                                        <i class="fe fe-user-check"></i> Organize</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./docs/index.html" class="nav-link">
+                                        <i class="fe fe-mail"></i> Newsletter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./docs/index.html" class="nav-link">
+                                        <i class="fe fe-feather"></i> Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./docs/index.html" class="nav-link">
+                                        <i class="fe fe-github"></i> Contribute</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
+                                        <i class="fe fe-heart" style="color:red;"></i> Support Us</a>
+                                    <div class="dropdown-menu dropdown-menu-arrow">
+                                        <a href="./" class="dropdown-item ">
+                                            <i class="fa fa-inr"></i> Donate</a>
+                                        <a href="./" class="dropdown-item ">
+                                            <i class="fa fa-cart-plus"></i> Buy a T-Shirt</a>
+                                        <a href="./" class="dropdown-item ">
+                                            <i class="fa fa-universal-access"></i> Our Patron Page</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 my-md-5">
+            </div>
+            <div class="my-3 my-md-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>What is GirlScript?</h2>
+                            <p>GirlScript Foundation is a Non-profit registered by Government of India, has come up
+                                with a unique and India's first women oriented technical festival.
+                            </p>
+                            <p>
+                                GirlScript started as a project has been selected by Mozilla under Open Leadership
+                                program out of 51 open-source projects worldwide.The main motto of GirlScript is not
+                                only to encourage gender equality in technical sector but also to help all the beginner
+                                in technology who are clueless at the starting phase of their education.
+                            </p>
+                            <p>
+                                We not only train them but also let them know about various national and international
+                                events, speaking opportunities, scholarship and fellowships. Currently, we have
+                                chapters in Ahmedabad, Pune, Nagpur, Kolkata and Bhopal. We have conducted 23+ free
+                                workshops starting from February, 2017.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="./images/whatisgirlscript.png" alt="GirlScript India" />
+                            <!-- <iframe src="https://www.youtube.com/embed/nhmHufElF3A" width="585" height="329" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>-->
+                        </div>
+
+                    </div>
+
+                    <section class="section" aria-label="Base features">
+                        <div class="container">
+                            <h2 class="section-title text-center mb-6">Tabler comes with tons of<br>well-designed
+                                components and features.</h2>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-10 col-md-5 pr-md-5 mb-5 mb-md-0"> <img src="/img/tabler-features.png"
+                                        alt="" class="img-responsive"></div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-12 mb-5 d-flex">
+                                            <div class="icon icon-gray mr-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 256 256">
+                                                    <path d="M216.8 0H40v192H0v64h256v-64h-39.2V0zm-16 240H75.2l68-104L64 16h137.6v224h-.8zM124 136 56 239.2V33.6L124 136zM16 208h24v32H16v-32zm224 0v32h-23.2v-32H240z"></path>
+                                                    <path d="M160 32h16v64h-16z"></path>
+                                                </svg></div>
+                                            <div>
+                                                <h3 class="h5">Coded by Developers for Developers</h3>
+                                                <p class="text-muted m-0"> Clear and telling code that you won't get
+                                                    lost in. It was made with care and loves so that you don't have to
+                                                    spend hours on making it work ❤️</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-5 d-flex">
+                                            <div class="icon icon-gray mr-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 256 232">
+                                                    <path d="M132.8 32h-1.6V0H112L43.2 72.8v22.4L112 168h19.2v-32H144c52.8 0 96 43.2 96 96h16v-76.8C256 87.2 200.8 32 132.8 32zM240 174.4c-20-33.6-56.8-54.4-96-54.4h-28.8v28l-56-59.2v-9.6l56-59.2v28h17.6C192 48 240 96 240 155.2v19.2z"></path>
+                                                    <path d="M16 77.6 78.4 12 67.2.8 0 71.2v25.6L75.2 176l12-11.2L16 90.4z"></path>
+                                                </svg></div>
+                                            <div>
+                                                <h3 class="h5">Open Source Code</h3>
+                                                <p class="text-muted m-0"> You can see the code of Tabler on its GitHub
+                                                    account. If you miss any feature feel free to create a pull request
+                                                    there, we'll definitely check it.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-5 d-flex">
+                                            <div class="icon icon-gray mr-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 256 240">
+                                                    <path d="M216 120c-8.8 0-16.8 3.2-24 8-17.6-13.6-42.4-9.6-56 8-12 16-10.4 37.6 3.2 52l48.8 52h8l51.2-55.2c5.6-7.2 8.8-16 8.8-24.8 0-22.4-17.6-40-40-40zm19.2 54.4L192 220.8l-40.8-44c-9.6-9.6-9.6-24.8 0-33.6 9.6-9.6 24.8-9.6 33.6 0 .8.8.8.8.8 1.6l6.4 7.2 6.4-7.2c4.8-5.6 11.2-8 17.6-8 13.6 0 24 10.4 24 24 0 4.8-1.6 9.6-4.8 13.6z"></path>
+                                                    <path d="M112 144H16V24l112 73.6 112-74.4V112h16V0H0v160h112v-16zm16-65.6L33.6 16h188.8L128 78.4z"></path>
+                                                </svg></div>
+                                            <div>
+                                                <h3 class="h5">Build with Bootstrap</h3>
+                                                <p class="text-muted m-0"> Tabler used Bootstrap, the most popular
+                                                    HTML, CSS, and JS framework. Thanks to this developers without
+                                                    experience can modify code without any problems</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section bg-light">
+                        <div class="container text-center">
+                            <h2 class="section-title mb-2">Ready to download?</h2>
+                            <p class="section-description"> Start your adventure with Tabler and make your dashboard
+                                great again. For free!</p>
+                            <div class="mt-4"> <a href="https://gum.co/tabler" class="btn btn-green" target="_blank">Download</a>
+                                <a href="https://preview.tabler.io" class="btn btn-white ml-2">See demo</a></div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">
+                                            <b>GirlScript India</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Foundation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Newsletter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <strong>Chat With US!</strong>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Code of Conduct</a>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">
+                                            <b>Support Us </b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Make a Donation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Donate on Patreon</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contribute</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buy a Sticker</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sponsor Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">
+                                            <b>Community</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Twitter</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">Github</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="#">
+                                            <b>Resources</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tutorial</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Organizer's Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coaching Guide</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tutorial Extensions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Graphics</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#">
+                                    <b>Updates!</b>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>85</strong> Upcoming Events</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>614</strong> Events</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>41550</strong> applicants</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>15581</strong> Attendees</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <strong>93</strong> Countries</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-auto ml-lg-auto">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <ul class="list-inline list-inline-dots mb-0">
+                                    <li class="list-inline-item">
+                                        <a href="./join.html">Join Us</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="./faq.html">FAQ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+                                <a href="" class="btn btn-outline-primary btn-sm">Donate Us!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
+                        Copyright © 2018 GirlScript India | All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
